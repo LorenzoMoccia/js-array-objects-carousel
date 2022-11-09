@@ -44,15 +44,7 @@ for(let i = 0; i < images.length; i++){
     const imgPrimary = `<img class="primary-images" src="${currentImages.image}"></img>`
     const imgSecondary = `<img class="secondary-images" src="${currentImages.image}"></img>`
 
-    if(i >= 1){
-        const secondElement = document.getElementsByClassName("preview")[i -1];
-        secondElement.classList.add("secondary-images");
-        secondElement.innerHTML = imgSecondary;
-    }
-    else{
-        element.classList.add("primary-image");
-        element.innerHTML = imgPrimary;
-    }
+   
     
 
     
