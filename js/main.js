@@ -25,6 +25,10 @@ const images = [
     }
 ];
 
+
+
+
+
 //Clono il template HTML
 const node = document.querySelector(".container");
 
@@ -33,25 +37,33 @@ document.body.appendChild(clone);
 
 node.parentNode.removeChild(node);
 
-
+let counter = 0;
 
 for(let i = 0; i < images.length; i++){
 
     const firstImage = document.getElementsByClassName("first-image")[i];
-    const preview = document.getElementsByClassName("preview")[i - 1];
-
+    const preview = document.getElementsByClassName("preview")[i];
     const currentImage = images[i];
 
     let element = ` <img src="${currentImage.image}" class="img-small"></img> `
 
-    if(i >= 1){
+
         preview.innerHTML = element;
+    
+    if(i == 0){
+        firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
     }
-    else{
-        element = ` <img src="${currentImage.image}" class="img-big"></img> `
-        firstImage.innerHTML = element;
+
+    if(counter === 1){
+        firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
     }
+    
+    console.log(counter);
+
+
+    
 }
+
 
 
 
