@@ -13,6 +13,7 @@
 
 .images-container{
     position: relative;
+    text-align: center;
  }
 
 .first-image{
@@ -42,4 +43,22 @@
     width: 200px;
     height: calc(500px / 4);
     display: block;
+}
+
+.up-btn{
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.down-btn{
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

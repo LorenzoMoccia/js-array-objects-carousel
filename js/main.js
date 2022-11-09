@@ -44,7 +44,6 @@ for(let i = 0; i < images.length; i++){
 
     let element = ` <img src="${currentImage.image}" class="img-small"></img> `
 
-
     if(i >= 1){
         preview.innerHTML = element;
     }
