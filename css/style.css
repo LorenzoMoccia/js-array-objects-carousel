@@ -23,7 +23,7 @@
 
 .preview{
     width: 200px;
-    height: 100px;
+    height: calc(500px / 4);
     border: 1px dashed violet;
 }
 
@@ -31,4 +31,15 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.img-big{
+    width: 800px;
+    height: 500px;
+}
+
+.img-small{
+    width: 200px;
+    height: calc(500px / 4);
+    display: block;
 }

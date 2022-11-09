@@ -36,19 +36,22 @@ node.parentNode.removeChild(node);
 
 
 for(let i = 0; i < images.length; i++){
-    const element = document.getElementsByClassName("main-image-container")[i];
-    
 
-    const currentImages = images[i];
-    
-    const imgPrimary = `<img class="primary-images" src="${currentImages.image}"></img>`
-    const imgSecondary = `<img class="secondary-images" src="${currentImages.image}"></img>`
+    const firstImage = document.getElementsByClassName("first-image")[i];
+    const preview = document.getElementsByClassName("preview")[i - 1];
 
-   
-    
+    const currentImage = images[i];
 
-    
-    
+    let element = ` <img src="${currentImage.image}" class="img-small"></img> `
+
+
+    if(i >= 1){
+        preview.innerHTML = element;
+    }
+    else{
+        element = ` <img src="${currentImage.image}" class="img-big"></img> `
+        firstImage.innerHTML = element;
+    }
 }
 
 
