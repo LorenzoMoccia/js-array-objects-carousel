@@ -25,10 +25,41 @@ const images = [
     }
 ];
 
-
+//Clono il template HTML
 const node = document.querySelector(".container");
 
+const clone = node.cloneNode(node);
+document.body.appendChild(clone);
+
+node.parentNode.removeChild(node);
+
+
+
 for(let i = 0; i < images.length; i++){
-    const clone = node.cloneNode(node);
-    document.body.appendChild(clone)
+    const element = document.getElementsByClassName("main-image-container")[i];
+    
+
+    const currentImages = images[i];
+    
+    const imgPrimary = `<img class="primary-images" src="${currentImages.image}"></img>`
+    const imgSecondary = `<img class="secondary-images" src="${currentImages.image}"></img>`
+
+    if(i >= 1){
+        const secondElement = document.getElementsByClassName("preview")[i -1];
+        secondElement.classList.add("secondary-images");
+        secondElement.innerHTML = imgSecondary;
+    }
+    else{
+        element.classList.add("primary-image");
+        element.innerHTML = imgPrimary;
+    }
+    
+
+    
+    
 }
+
+
+
+//Devo ciclare l'array e far stampare 5 immagini
+//Devo aggiungere una classe alla prima immagine
