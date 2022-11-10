@@ -72,12 +72,14 @@ const downBtn = document.getElementById("downbtn");
 
 
 btnUp.addEventListener("click", function(){
-    counter++;
     const firstImage = document.getElementById("main-image");
     firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
 
-    if(counter >= 4){
-        counter = 0 - 1;
+    if(counter < images.length - 1){
+        counter++;
+    }
+    else{
+        counter = 0;
     }
     
 
@@ -86,11 +88,12 @@ btnUp.addEventListener("click", function(){
    
 
 downBtn.addEventListener("click", function(){
-    counter--;
 
-    if(counter < 0){
-        counter = 4;
-        
+    if(counter > 0){
+        counter--;
+    }
+    else{
+        counter = images.length -1;
     }
 
     console.log(counter);
