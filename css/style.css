@@ -52,7 +52,8 @@ body{
 .up-btn{
     position: absolute;
     top: 0;
-    right: 200px;
+    z-index: 999;
+    right: 65px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -61,7 +62,8 @@ body{
 .down-btn{
     position: absolute;
     bottom: 0;
-    right: 200px;
+    z-index: 999;
+    right: 65px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -70,7 +72,7 @@ body{
 #titolo{
     color: white;
     position: absolute;
-    right: 400px;
+    right: 210px;
     bottom: 50px;
-    
+    border-style: dashed;
 }
