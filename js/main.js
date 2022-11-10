@@ -43,6 +43,9 @@ for(let i = 0; i < images.length; i++){
 
     const firstImage = document.getElementsByClassName("first-image")[i];
     const preview = document.getElementsByClassName("preview")[i];
+
+    const title = document.getElementById("titolo");
+
     const currentImage = images[i];
 
     let element = ` <img src="${currentImage.image}" class="img-small"></img> `
@@ -51,7 +54,10 @@ for(let i = 0; i < images.length; i++){
         preview.innerHTML = element;
     
     if(i == 0){
-        firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+
+        
+        firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img>
+                                 <h1 id="titolo">${images[counter].title}</h1> `
     }
 
     
@@ -73,7 +79,8 @@ const downBtn = document.getElementById("downbtn");
 
 btnUp.addEventListener("click", function(){
     const firstImage = document.getElementById("main-image");
-    firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+    firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img>
+                             <h1 id="titolo">${images[counter].title}</h1> `
 
     if(counter < images.length - 1){
         counter++;
