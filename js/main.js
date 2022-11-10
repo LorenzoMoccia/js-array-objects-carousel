@@ -68,13 +68,23 @@ for(let i = 0; i < images.length; i++){
 const btnUp = document.getElementById("upbtn");
 const downBtn = document.getElementById("downbtn");
 
+
+
+
 btnUp.addEventListener("click", function(){
     counter++;
     const firstImage = document.getElementById("main-image");
     firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+
+    if(counter >= 4){
+        counter = 0 - 1;
+    }
     
+
+    console.log(counter);
 });
-    
+   
+
 downBtn.addEventListener("click", function(){
     counter--;
     const firstImage = document.getElementById("main-image");
