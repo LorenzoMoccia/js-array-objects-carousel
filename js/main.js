@@ -66,6 +66,7 @@ for(let i = 0; i < images.length; i++){
 
 
 const btnUp = document.getElementById("upbtn");
+const downBtn = document.getElementById("downbtn");
 
 btnUp.addEventListener("click", function(){
     counter++;
@@ -74,6 +75,10 @@ btnUp.addEventListener("click", function(){
     
 });
     
-
+downBtn.addEventListener("click", function(){
+    counter--;
+    const firstImage = document.getElementById("main-image");
+    firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+})
 //Devo ciclare l'array e far stampare 5 immagini
 //Devo aggiungere una classe alla prima immagine
