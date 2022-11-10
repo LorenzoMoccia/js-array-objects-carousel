@@ -57,7 +57,8 @@ for(let i = 0; i < images.length; i++){
 
         
         firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img>
-                                 <h1 id="titolo">${images[counter].title}</h1> `
+                                 <h1 id="titolo">${images[counter].title}</h1>
+                                 <p id="descrizione">${images[counter].text}</p> `
     }
 
     
@@ -80,7 +81,8 @@ const downBtn = document.getElementById("downbtn");
 btnUp.addEventListener("click", function(){
     const firstImage = document.getElementById("main-image");
     firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img>
-                             <h1 id="titolo">${images[counter].title}</h1> `
+                             <h1 id="titolo">${images[counter].title}</h1> 
+                             <p id="descrizione">${images[counter].text}</p>`
 
     if(counter < images.length - 1){
         counter++;
@@ -105,7 +107,9 @@ downBtn.addEventListener("click", function(){
 
     console.log(counter);
     const firstImage = document.getElementById("main-image");
-    firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+    firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img>
+                             <h1 id="titolo">${images[counter].title}</h1>
+                             <p id="descrizione">${images[counter].text}</p> `
 
     
 })
