@@ -87,8 +87,17 @@ btnUp.addEventListener("click", function(){
 
 downBtn.addEventListener("click", function(){
     counter--;
+
+    if(counter < 0){
+        counter = 4;
+        
+    }
+
+    console.log(counter);
     const firstImage = document.getElementById("main-image");
     firstImage.innerHTML = ` <img src="${images[counter].image}" class="img-big"></img> `
+
+    
 })
 //Devo ciclare l'array e far stampare 5 immagini
 //Devo aggiungere una classe alla prima immagine
